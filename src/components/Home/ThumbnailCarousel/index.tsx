@@ -102,7 +102,7 @@ const ThumbnailCarousel: React.FC = () => {
         <Slider {...settingsFor} ref={mainSliderRef} className="pb-3">
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-1.jpg"
+              src="/images/ThumbnailSlider/slider-1.jpg"
               alt="Conference"
               width={0}
               height={0}
@@ -114,7 +114,7 @@ const ThumbnailCarousel: React.FC = () => {
           </div>
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-2.jpg"
+              src="/images/ThumbnailSlider/slider-2.jpg"
               alt="Conference"
               width={0}
               height={0}
@@ -126,7 +126,7 @@ const ThumbnailCarousel: React.FC = () => {
           </div>
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-3.jpg"
+              src="/images/ThumbnailSlider/slider-3.jpg"
               alt="Conference"
               width={0}
               height={0}
@@ -138,7 +138,7 @@ const ThumbnailCarousel: React.FC = () => {
           </div>
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-4.jpg"
+              src="/images/ThumbnailSlider/slider-4.jpg"
               alt="Conference"
               width={0}
               height={0}
@@ -152,7 +152,7 @@ const ThumbnailCarousel: React.FC = () => {
         <Slider {...settingsNav} ref={navSliderRef} className="thumb">
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-1.jpg"
+              src="/images/ThumbnailSlider/slider-1.jpg"
               alt="Thumbnail"
               width={0}
               height={0}
@@ -164,7 +164,7 @@ const ThumbnailCarousel: React.FC = () => {
           </div>
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-2.jpg"
+              src="/images/ThumbnailSlider/slider-2.jpg"
               alt="Thumbnail"
               width={0}
               height={0}
@@ -176,7 +176,7 @@ const ThumbnailCarousel: React.FC = () => {
           </div>
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-3.jpg"
+              src="/images/ThumbnailSlider/slider-3.jpg"
               alt="Thumbnail"
               width={0}
               height={0}
@@ -188,7 +188,7 @@ const ThumbnailCarousel: React.FC = () => {
           </div>
           <div>
             <Image
-              src="/images/ThumbnailSlider/Slider-4.jpg"
+              src="/images/ThumbnailSlider/slider-4.jpg"
               alt="Thumbnail"
               width={0}
               height={0}

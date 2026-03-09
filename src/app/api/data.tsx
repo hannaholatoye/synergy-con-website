@@ -8,7 +8,7 @@ export const speakers = [
     },
     {
       id: 2,
-      src: "/images/world-class-speakers/tega.jpg",
+      src: "/images/world-class-speakers/Tega.jpg",
       alt: "work class speakers",
       name: "Mr. Tega Oghenejobo",
       designation: "Entertainment Buisness",
