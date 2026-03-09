@@ -12,7 +12,7 @@ import Past from '@/components/Home/Past';
 import Faq from "@/components/Home/Faq";
 import EventDetailsStrip from "@/components/Home/EventDetailStrip";
 export const metadata: Metadata = {
-  title: "Symposium",
+  title: "Synergy Con-2.0",
 };
 
 export default function Home() {

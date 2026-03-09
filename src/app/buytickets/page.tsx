@@ -159,12 +159,6 @@ export default function BuyTicketsPage() {
   const [phone, setPhone] = useState("");
   const [ref, setRef] = useState("");
 
-  const [errors, setErrors] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-  });
-
   const cartItems = useMemo(() => {
     return TICKETS.filter((t) => qty[t.key] > 0).map((t) => ({
       ...t,
@@ -183,30 +177,9 @@ export default function BuyTicketsPage() {
     [cartItems]
   );
 
-  const canContinue = totalQty > 0 && fullName.trim() && email.trim() && phone.trim();
-
-  const validateForm = () => {
-    const newErrors = { fullName: "", email: "", phone: "" };
-
-    if (!fullName.trim()) newErrors.fullName = "Full name is required";
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.trim()))
-      newErrors.email = "Enter a valid email address";
-
-    // Simple, practical validation for NG/intl numbers:
-    // allows +, spaces, dashes, 7-15 chars
-    const phoneRegex = /^[0-9+\-\s]{7,15}$/;
-    if (!phoneRegex.test(phone.trim()))
-      newErrors.phone = "Enter a valid phone number";
-
-    setErrors(newErrors);
-    return !newErrors.fullName && !newErrors.email && !newErrors.phone;
-  };
+  const canContinue = totalQty > 0;
 
   const handleContinue = () => {
-    if (!validateForm()) return;
-
     const payload = {
       tickets: cartItems.map((x) => ({
         tier: x.name,
@@ -223,7 +196,8 @@ export default function BuyTicketsPage() {
   };
 
   return (
-    <main className="bg-white min-h-screen">
+    // ✅ Added padding-top so it doesn't hide behind fixed header
+    <main className="bg-white min-h-screen pt-28 md:pt-32">
       <div className="container">
         <Stepper />
 
@@ -304,16 +278,10 @@ export default function BuyTicketsPage() {
                   </label>
                   <input
                     value={fullName}
-                    onChange={(e) => {
-                      setFullName(e.target.value);
-                      if (errors.fullName) setErrors((p) => ({ ...p, fullName: "" }));
-                    }}
+                    onChange={(e) => setFullName(e.target.value)}
                     placeholder="John Doe"
                     className="w-full rounded-lg border border-black/20 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10"
                   />
-                  {errors.fullName && (
-                    <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
-                  )}
                 </div>
 
                 <div>
@@ -322,16 +290,10 @@ export default function BuyTicketsPage() {
                   </label>
                   <input
                     value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                      if (errors.email) setErrors((p) => ({ ...p, email: "" }));
-                    }}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="john.doe@example.com"
                     className="w-full rounded-lg border border-black/20 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10"
                   />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                  )}
                 </div>
 
                 <div>
@@ -340,16 +302,10 @@ export default function BuyTicketsPage() {
                   </label>
                   <input
                     value={phone}
-                    onChange={(e) => {
-                      setPhone(e.target.value);
-                      if (errors.phone) setErrors((p) => ({ ...p, phone: "" }));
-                    }}
+                    onChange={(e) => setPhone(e.target.value)}
                     placeholder="+234 800 000 0000"
                     className="w-full rounded-lg border border-black/20 px-4 py-3 outline-none focus:ring-2 focus:ring-black/10"
                   />
-                  {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-                  )}
                 </div>
 
                 <div>

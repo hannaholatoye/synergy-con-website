@@ -164,7 +164,7 @@ export default function TicketsStub() {
             </Link> */}
 
             <Link
-              href="/schedule"
+              href="/schedules"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/5 px-7 py-4 text-white font-semibold hover:bg-white/10 transition"
             >
               View Full Schedule
