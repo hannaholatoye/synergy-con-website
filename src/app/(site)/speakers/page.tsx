@@ -3,7 +3,7 @@ import TicketSection from "@/components/Home/TicketSection";
 import WorkSpeakers from "@/components/Home/WorkSpeakers";
 import HeroSub from "@/components/SharedComponent/HeroSub";
 import React from "react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Speakers | Symposium",
 };

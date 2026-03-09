@@ -1,5 +1,5 @@
 import React from 'react'
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Hero from '@/components/Home/Hero';
 import ThumbnailCarousel from '@/components/Home/Conferences';
 import WorkSpeakers from '@/components/Home/WorkSpeakers';

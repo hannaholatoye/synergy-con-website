@@ -6,7 +6,7 @@ import Schedules from "@/components/Home/Schedules";
 import TicketSection from "@/components/Home/TicketSection";
 import Testimonial from "@/components/SharedComponent/Testimonial";
 import Testimonials from "@/components/Home/Testimonials";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Schedules | Symposium",
 };
