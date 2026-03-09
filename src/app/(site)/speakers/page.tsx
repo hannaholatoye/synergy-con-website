@@ -20,7 +20,7 @@ const page = () => {
         description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive."
         breadcrumbLinks={breadcrumbLinks}
       />
-      <WorkSpeakers showTitle={false} />
+      <WorkSpeakers />
       <Testimonials/>
       <TicketSection/>
     </>
